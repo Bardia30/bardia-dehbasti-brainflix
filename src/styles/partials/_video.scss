@@ -1,0 +1,12 @@
+@use './mixins' as*;
+@use './variables' as*;
+
+
+.video {
+    background: $video-component-color;
+    display: flex;
+    justify-content: center;
+    &__video-element{
+        width:70vw;
+    }
+}

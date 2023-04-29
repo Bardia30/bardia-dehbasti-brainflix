@@ -1,0 +1,93 @@
+@use './mixins' as*;
+@use './variables' as*;
+
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 6.5rem;
+    &__right-section{
+        display: flex;
+        align-items: center;
+    }
+
+    &__search-section{
+        display: flex;
+        align-items: center;
+        margin-left: 2rem;
+        margin-right:2rem;
+        border: solid 1px $divider-color;
+        border-radius: 4px;
+        padding: 0.75rem 1.375rem;
+        width: 13rem;
+        background-color: $form-background;
+        &:focus-within{
+            border: solid 2px $primary-cta-color;
+        }
+        
+    }
+    &__search-icon{
+        margin-right: 0.25rem;
+        width: 1.25rem;
+
+    }
+    &__search-input{
+        border:none;
+        &:focus{
+            outline: none;
+        }
+        &::placeholder{
+            color: $primary-text-colour;
+            font-weight: 500;
+            font-size: 0.85rem;
+            font-family: 'avenir';
+        }
+    }
+    
+
+    &__upload-section{
+        display:flex;
+        align-items: center;
+
+        margin-left: 2rem;
+        margin-right:2rem;
+        background-color: $primary-cta-color;
+        border-radius:4px;
+        padding: 0.75rem 1rem;
+        width:8rem;
+        cursor:pointer;
+        transition: 0.5s ease-in-out;
+        &:hover{
+            background-color: $hover-cta-color;
+        }
+    }
+    &__upload-text{
+        text-transform: uppercase;
+        color: $form-background;
+        margin-top:0.15rem;
+        margin-bottom:0;
+        font-weight: 500;
+        font-size: 0.8rem;
+
+    }
+    &__upload-icon{
+        width: 1.5rem;
+        margin-right: 1rem;
+    }
+    
+    &__logo{
+        justify-self: flex-start;
+    }
+    
+    &__user{
+        height:3rem;
+        width:3rem;
+        border-radius:50%;
+        overflow: hidden;
+    }
+    &__user-img{
+        height:3rem;
+    }
+}
