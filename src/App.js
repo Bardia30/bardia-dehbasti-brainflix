@@ -1,12 +1,13 @@
 import './App.css';
 import Header from './components/Header';
-import Video from './components/Video';
+import Main from './components/MainComponents/Main';
+
 
 function App() {
   return (
     <>
       <Header/>
-      <Video imageURL="https://i.imgur.com/l2Xfgpl.jpg"/> {/*gotta figure this out later to make it dynamic*/}
+      <Main/>
     </>
   )
 }
