@@ -3,12 +3,15 @@
 @use './styles/partials/mixins' as*;
 @use './styles/partials/variables' as*;
 @use './styles/partials/video' as*;
+@use './styles/partials/mainBottomSection' as*;
+@use './styles/partials/leftSection' as*;
+@use './styles/partials/description' as*;
 
 
 
 body {
     margin: 0;
     box-sizing: border-box;
-    background-color: $primary-background;
+    background: $primary-background;
     font-family: "avenir";
 }
