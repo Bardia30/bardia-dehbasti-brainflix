@@ -9,30 +9,37 @@
         line-height: 2.75rem;
         margin:0;
         color: $primary-text-colour;
+        padding-bottom:0.75rem;
     }
 
     &__lower-section{
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding-bottom:0.5rem;
+
+        border-bottom: 2px solid $divider-color;
     }
     &__author-date{
         display: flex;
         align-items: center;
         width:12rem;
         justify-content: space-between;
+        margin:0;
     }
     &__author{
         font-size: 0.925rem;
         font-weight: 700;
         line-height: 1.375rem;
         color: $primary-text-colour;
+        margin:0;
     }
     &__date{
         font-size: 0.75rem;
         font-weight: 400;
         line-height: 1.375rem;
         color: $secondary-text-color;
+        margin:0;
     }
 
     &__statistics{
@@ -53,13 +60,19 @@
             justify-content: space-between;
         }
     }
-    &__stat-icon{
-
+    &__long-text{
+        font-size: 0.925rem;
+        font-weight: 400;
+        line-height: 1.375rem;
+        color: $primary-text-colour;
+        margin:0;
+        padding-top: 1.75rem;
     }
     &__stat-count{
         font-size: 0.75rem;
         font-weight: 400;
         line-height: 1.375rem;
         color: $secondary-text-color;
+        margin:0;
     }
 }
