@@ -1,0 +1,15 @@
+@use './variables' as*;
+
+.articles{
+    padding-left:2rem;
+    padding-top:1.75rem;
+    border-left: 2px solid $divider-color;
+
+    &__title{
+        text-transform: uppercase;
+        font-size:0.875rem;
+        font-weight:600;
+        color: $secondary-text-color;
+        margin: 0;
+    }
+}

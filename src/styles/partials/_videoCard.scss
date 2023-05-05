@@ -1,0 +1,37 @@
+@use './variables' as*;
+
+.video-card{
+    padding-top:1rem;
+    padding-bottom:1rem;
+    display:flex;
+    &__pic-parent{
+        width:8rem;
+        height:5rem;
+        overflow: hidden;
+        border-radius: 5px;;
+    }
+    &__pic{
+        width:8rem;
+        height: 6rem;
+    }
+
+    &__title{
+        margin:0;
+        font-size:1rem;
+        font-weight:600;
+        color: $primary-text-colour;
+        width:12rem;
+    }
+    &__author{
+        margin:0;
+        font-size:1rem;
+        font-weight:500;
+        color: $primary-text-colour;
+    }
+    &__texts {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 1rem;;
+    }
+}
