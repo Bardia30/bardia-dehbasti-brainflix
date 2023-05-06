@@ -17,9 +17,18 @@ function Header() {
             <Nav>
                 <img className="navbar__logo" src={brainFlixLogo} alt="BrainFlix-logo"/>
                 <RightSection>
-                    <Search classSearch="navbar__search-section" imgClass="navbar__upload-icon" inputClass="navbar__search-input" icon={searchIcon} placeHolder="Search" />
+                <div className='navbar__search-user'>
+                    <Search
+                        classSearch="navbar__search-section"
+                        imgClass="navbar__upload-icon"
+                        inputClass="navbar__search-input"
+                        icon={searchIcon}
+                        placeHolder="Search"
+                    />
+                    <UserImage display="navbar__user-mobile"/>
+                </div>
                     <Upload classUpload="navbar__upload-section" classImg="navbar__upload-icon" classText="navbar__upload-text" icon={uploadIcon} alt="search-icon" text="upload"/>
-                    <UserImage/>
+                    <UserImage display="navbar__user-tabdesk"/>
                 </RightSection>
             </Nav>
         </header>
