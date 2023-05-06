@@ -8,7 +8,8 @@ export default function Comments () {
         <section className='comments'>
             <h3 className='comments__number-of-comments'>3 Comments</h3>
             <section className='comments__new-comment'>
-                <UserImage />
+                <UserImage display="navbar__user-tabdesk"/>
+                <UserImage display="navbar__user-mobile" />
                 <CommentForm />
             </section>
             <CommentsList />

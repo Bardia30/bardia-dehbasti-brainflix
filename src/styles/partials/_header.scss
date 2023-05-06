@@ -198,6 +198,10 @@
         display:none;
         @include tablet{
             display: flex;
+            height:3rem;
+            width:3rem;
+            border-radius:50%;
+            overflow: hidden;
         }
         @include desktop{
             height:3rem;

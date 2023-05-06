@@ -235,6 +235,10 @@
 @media (min-width: 768px) {
   .navbar__user-tabdesk {
     display: flex;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    overflow: hidden;
   }
 }
 @media (min-width: 1280px) {
