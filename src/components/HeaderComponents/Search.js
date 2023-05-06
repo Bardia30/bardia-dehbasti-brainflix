@@ -1,5 +1,4 @@
 import React from 'react';
-import searchIcon from '../../assets/Icons/search.svg';
 import SearchSection from '../UIHeader/SearchSection';
 
 
