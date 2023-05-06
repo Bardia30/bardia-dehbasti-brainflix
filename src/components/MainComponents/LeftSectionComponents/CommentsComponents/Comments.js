@@ -1,6 +1,7 @@
 import React from 'react';
 import UserImage from '../../../HeaderComponents/UserImage';
 import CommentForm from './CommentForm';
+import CommentsList from './CommentsList';
 
 export default function Comments () {
     return (
@@ -10,6 +11,7 @@ export default function Comments () {
                 <UserImage />
                 <CommentForm />
             </section>
+            <CommentsList />
         </section>
     )
 }

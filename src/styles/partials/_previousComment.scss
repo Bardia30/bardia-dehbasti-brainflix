@@ -1,0 +1,69 @@
+@use './variables' as *;
+@use './mixins' as*;
+
+
+
+
+.previous-comment {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1rem;
+    padding-top:1.75rem;
+    padding-bottom: 1.75rem;
+    border-top: 2px solid $divider-color;
+    &__pic-placeholder{
+        height:3rem;
+        width:3rem;
+        border-radius:50%;
+        overflow: hidden;
+        background-color: $divider-color;
+    }
+    &__texts{
+        @include flex($direction:column);
+        width:90%;
+
+    }
+    &__texts-top{
+        @include flex($justify:space-between);
+        align-items: center;
+    }
+
+    &__name{
+        margin-bottom:0;
+        @include font($size:1rem);
+        @include desktop {
+            font-family: "avenir";
+            font-size: 0.925rem;
+            font-weight: 600;
+            color: #323232;
+            line-height: normal;
+            margin:0;
+        }
+    }
+    &__date{
+        margin-bottom:0;
+        @include font($size:1rem, $color:$primary-text-colour,$weight:400);
+        @include desktop {
+            font-size: 0.925rem;
+            font-weight: 400;
+            line-height: 1.375rem;
+            color: $secondary-text-color;
+            margin:0;
+            margin-right:2rem;
+        }
+    }
+    &__long-paragraph{
+        width:21rem;
+        @include font($size:1.15rem, $weight:400, $line:1.5rem);
+        @include tablet {
+            width:38.125rem;
+            @include font($size:1rem, $weight:400, $line:1.5rem);
+        }
+        @include desktop{
+            width:33rem;
+            @include font($size:0.925rem, $weight:400, $line:1.5rem);
+        }
+        margin-top: 0.5rem;
+        margin-bottom:0;
+    }
+}
