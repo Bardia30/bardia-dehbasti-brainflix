@@ -1,13 +1,13 @@
 import React from 'react';
 import UploadSection from '../UIHeader/UploadSection';
-import uploadIcon from '../../assets/Icons/upload.svg';
 
 
-export default function Upload(){
+
+export default function Upload(props){
     return (
-        <UploadSection>
-            <img className="navbar__upload-icon" src={uploadIcon} alt="search-icon"/>
-            <p className="navbar__upload-text">upload</p>
+        <UploadSection sectionClass={props.classUpload}>
+            <img className={props.classImg} src={props.icon} alt={props.alt}/>
+            <p className={props.classText}>{props.text}</p>
         </UploadSection>
     );
 }

@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function SearchSection (props){
     return (
-        <div className="navbar__search-section">
+        <div className={props.classes}>
             {props.children}
         </div>
     )
