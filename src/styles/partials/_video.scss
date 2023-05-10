@@ -7,6 +7,13 @@
     display: flex;
     justify-content: center;
     &__video-element{
-        width:70vw;
+        width:100vw;
+        @include tablet{
+            width: 92vw;
+        }
+        @include desktop{
+            width:70vw;
+        }
     }
+    
 }

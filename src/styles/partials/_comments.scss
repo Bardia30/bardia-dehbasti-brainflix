@@ -1,10 +1,21 @@
 @use './variables' as*;
+@use './mixins' as*;
 
 
 .comments {
     display:flex;
     flex-direction: column;
-    padding-top:3rem;
+    padding-top: 2rem;
+    @include tablet{
+        display:flex;
+        flex-direction: column;
+        padding-top:3rem;
+    }
+    @include desktop{
+        display:flex;
+        flex-direction: column;
+        padding-top:3rem;
+    }
    
     &__number-of-comments{
         font-size: 0.925rem;
@@ -16,34 +27,97 @@
     &__new-comment{
         display: flex;
         padding-top:1.5rem;
-        align-items: flex-end;
         justify-content: space-between;
         padding-bottom: 1.75rem;
+        @include tablet{
+            display: flex;
+            padding-top:1.5rem;
+            align-items: flex-end;
+            justify-content: space-between;
+            padding-bottom: 1.75rem;
+        }
+        @include desktop{
+            display: flex;
+            padding-top:1.5rem;
+            align-items: flex-end;
+            justify-content: space-between;
+            padding-bottom: 1.75rem;
+        }
     }
 
     &__form{
         display: flex;
-        align-items: flex-end;
+        flex-direction: column;
+        align-items: center;
+        width:80%;
+        @include tablet{
+            display: flex;
+            align-items: flex-end;
+            flex-direction: row;
+            width:auto;
+        }
     }
     &__search-section{
         margin-left:0 ;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         border: solid 1px $divider-color;
         border-radius: 4px;
         padding: 0.75rem 1.375rem;
-        width: 20rem;
+        width: 15rem;
+        height: 6rem;
+        margin-bottom:1.25rem;
+        margin-top:0.5rem;
         background-color: $form-background;
         transition: 0.25s ease-in-out;
         &:focus-within{
             border: solid 2px $primary-cta-color;
         }
+        @include tablet{
+            width: 26.5rem;
+            margin-right:2rem;
+            height: auto;
+            margin-left:0 ;
+            display: flex;
+            align-items: center;
+            border: solid 1px $divider-color;
+            border-radius: 4px;
+            padding: 0.75rem 1.375rem;
+            margin-bottom: 0;
+            background-color: $form-background;
+            transition: 0.25s ease-in-out;
+            &:focus-within{
+                border: solid 2px $primary-cta-color;
+            }
+        }
+        @include desktop{
+            margin-left:0 ;
+            margin-right: 0;
+            display: flex;
+            align-items: center;
+            border: solid 1px $divider-color;
+            border-radius: 4px;
+            padding: 0.75rem 1.375rem;
+            width: 20rem;
+            background-color: $form-background;
+            transition: 0.25s ease-in-out;
+            &:focus-within{
+                border: solid 2px $primary-cta-color;
+            }
+        }
     }
     &__input-label{
         text-transform: uppercase;
-        font-size:0.875rem;
+        font-size:1rem;
         font-weight:600;
         color: $secondary-text-color;
         margin: 0;
+        @include tablet{
+            text-transform: uppercase;
+            font-size:0.875rem;
+            font-weight:600;
+            color: $secondary-text-color;
+            margin: 0;
+        }
     }
 }

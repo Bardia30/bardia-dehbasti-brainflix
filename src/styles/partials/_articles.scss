@@ -1,9 +1,22 @@
 @use './variables' as*;
+@use './mixins' as*;
 
 .articles{
-    padding-left:2rem;
+    
     padding-top:1.75rem;
-    border-left: 2px solid $divider-color;
+    border-top: 2px solid $divider-color;
+    padding-bottom:0.75rem;
+    @include tablet{
+        border-top: 2px solid $divider-color;
+        padding-bottom:1.75rem;
+    }
+    @include desktop{
+        padding-left:2rem;
+        padding-top:1.75rem;
+        border-left: 2px solid $divider-color;
+        border-top:none;
+    }
+    
 
     &__title{
         text-transform: uppercase;
@@ -11,5 +24,16 @@
         font-weight:600;
         color: $secondary-text-color;
         margin: 0;
+        padding-bottom: 0.5rem;
+        @include tablet{
+            padding-bottom: 0.75rem;
+        }
+        @include desktop{
+            text-transform: uppercase;
+            font-size:0.875rem;
+            font-weight:600;
+            color: $secondary-text-color;
+            margin: 0;
+        }
     }
 }
