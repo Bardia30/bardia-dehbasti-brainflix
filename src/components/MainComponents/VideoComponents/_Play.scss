@@ -1,0 +1,28 @@
+@use '../../../styles/partials/mixins' as*;
+@use '../../../styles/partials/variables' as*;
+
+
+.play{
+    height:1.325rem;
+    width:2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background:rgba(0, 0, 0, 0.5);
+    @include tablet{
+        height:2.325rem;
+        width:2.825rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+        background:rgba(0, 0, 0, 0.5);
+    }
+    &__icon{
+        width:0.6rem;
+        @include tablet{
+            width:auto;
+        }
+    }
+}

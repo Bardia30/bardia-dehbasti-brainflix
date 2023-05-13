@@ -1,0 +1,28 @@
+@use '../../../styles/partials/mixins' as*;
+@use '../../../styles/partials/variables' as*;
+
+.screen-sound {
+    height:1.325rem;
+    width:4.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 6px;
+    background:rgba(0, 0, 0, 0.5);
+    @include tablet{
+        height:2.325rem;
+        width:4.5rem;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border-radius: 6px;
+        background:rgba(0, 0, 0, 0.5);
+    }
+
+    &__icon{
+        width:1.15rem;
+        @include tablet{
+            width:auto;
+        }
+    }
+}

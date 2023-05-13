@@ -10,7 +10,12 @@
 @use './styles/partials/videoCard' as*;
 @use './styles/partials/comments' as*;
 @use './styles/partials/previousComment' as*;
+@use './components/MainComponents/VideoComponents/Play' as*;
+@use './components/MainComponents/VideoComponents/Controls' as*;
 
+@use './components/MainComponents/VideoComponents/ProgressBar' as*;
+
+@use './components/MainComponents/VideoComponents/FullScreenSound' as*;
 
 body {
     margin: 0;
