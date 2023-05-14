@@ -1,4 +1,5 @@
-@use './variables' as*;
+@use '../../../styles/partials/mixins' as *;
+@use '../../../styles/partials/variables' as *;
 
 .video-card{
     padding-top:1rem;

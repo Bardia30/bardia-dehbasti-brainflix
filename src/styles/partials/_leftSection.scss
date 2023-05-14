@@ -1,9 +1,0 @@
-@use './variables' as*;
-@use './mixins' as*;
-
-.left-section {
-    @include desktop{
-        width:70%;
-    }
-    
-}

@@ -1,15 +1,15 @@
 @use './styles/partials/fonts' as*;
-@use './styles/partials/header' as*;
+@use './components/HeaderComponents/header' as*;
 @use './styles/partials/mixins' as*;
 @use './styles/partials/variables' as*;
-@use './styles/partials/video' as*;
-@use './styles/partials/mainBottomSection' as*;
-@use './styles/partials/leftSection' as*;
-@use './styles/partials/description' as*;
-@use './styles/partials/articles' as*;
-@use './styles/partials/videoCard' as*;
-@use './styles/partials/comments' as*;
-@use './styles/partials/previousComment' as*;
+@use './components/MainComponents/VideoComponents/video' as*;
+@use './components/MainComponents/MainBottomSection/mainBottomSection' as*;
+@use './components/MainComponents/leftSectionUI/leftSection' as*;
+@use './components/MainComponents/LeftSectionComponents/DescriptionComponents/description' as*;
+@use './components/MainComponents/ArticlesComponents/articles' as*;
+@use './components/MainComponents/ArticlesComponents/videoCard' as*;
+@use './components/MainComponents/LeftSectionComponents/CommentsComponents/comments' as*;
+@use './components/MainComponents/LeftSectionComponents/CommentsComponents/previousComment' as*;
 @use './components/MainComponents/VideoComponents/Play' as*;
 @use './components/MainComponents/VideoComponents/Controls' as*;
 

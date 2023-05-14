@@ -1,6 +1,5 @@
 import React from 'react';
 import brainFlixLogo from '../../assets/Logo/BrainFlix-logo.svg';
-import '../../styles/partials/_header.scss';
 import Nav from '../UIHeader/Nav';
 import RightSection from '../UIHeader/RightSection';
 import Search from './Search';
