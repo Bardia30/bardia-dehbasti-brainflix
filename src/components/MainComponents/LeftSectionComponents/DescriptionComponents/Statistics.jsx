@@ -5,18 +5,18 @@ import likesIcon from '../../../../assets/Icons/likes.svg';
 
 
 
-export default function Statistics() {
+export default function Statistics(props) {
     return (
         <section className='description__statistics'>
             <StatisticsSub
                 className="description__statistics--left"
                 icon={viewIcon}
-                count="1,001,023"
+                count={props.videoDetailsData.views}
             />
             <StatisticsSub
                 className="description__statistics--right"
                 icon={likesIcon}
-                count="110,985"
+                count={props.videoDetailsData.likes}
             />
         </section>
     )

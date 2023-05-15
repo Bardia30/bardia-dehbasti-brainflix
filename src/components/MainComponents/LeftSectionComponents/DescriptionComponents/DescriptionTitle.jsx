@@ -1,8 +1,8 @@
 import React from 'react';
 
 
-export default function DescriptionTitle () {
+export default function DescriptionTitle (props) {
     return (
-        <h1 className='description__title'>BMX Rampage: 2021 Highlights</h1>
+        <h1 className='description__title'>{props.title}</h1>
     )
 }

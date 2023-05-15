@@ -1,19 +1,18 @@
 import React from "react";
 import Comment from "./Comment";
-import videoDetails from '../../../../data/video-details.json';
 
-const currentVideoComments = videoDetails[0].comments;
+
 
 const convertDate = (date) => {
     const newDate = new Date(date);
-    return newDate.toLocaleDateString();
+    return newDate.toLocaleDateString('en-US');
 }
 
 
 export default function CommentsList (props){
     return (
         <>
-            {currentVideoComments.map(comment =>{
+            {props.currentVideoData.map(comment =>{
                 return (
                     <Comment
                         userName={comment.name}
@@ -25,3 +24,5 @@ export default function CommentsList (props){
         </>
     )
 }
+
+export {convertDate};

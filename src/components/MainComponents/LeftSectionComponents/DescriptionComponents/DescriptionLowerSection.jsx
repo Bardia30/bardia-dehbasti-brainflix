@@ -4,11 +4,12 @@ import Statistics from './Statistics';
 
 
 
-export default function DescriptionLowerSection() {
+export default function DescriptionLowerSection(props) {
+    
     return (
         <div className='description__lower-section'>
-            <AuthorDate/>
-            <Statistics/>
+            <AuthorDate videoDetailsData={props.videoDetailsData}/>
+            <Statistics videoDetailsData={props.videoDetailsData}/>
         </div>
     )
 }
