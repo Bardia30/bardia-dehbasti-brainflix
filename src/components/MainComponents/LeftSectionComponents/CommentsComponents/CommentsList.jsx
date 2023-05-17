@@ -15,6 +15,7 @@ export default function CommentsList (props){
             {props.currentVideoData.map(comment =>{
                 return (
                     <Comment
+                        key = {comment.id}
                         userName={comment.name}
                         date = {convertDate(comment.timestamp)}
                         commentText = {comment.comment}

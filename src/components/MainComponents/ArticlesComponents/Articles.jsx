@@ -23,6 +23,7 @@ export default function Articles(){
                 .map(video => {
                 return (
                     <VideoCard
+                        key = {video.id}
                         url={video.image}
                         title={video.title}
                         channel={video.channel}
