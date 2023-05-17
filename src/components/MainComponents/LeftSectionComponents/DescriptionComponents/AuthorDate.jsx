@@ -7,7 +7,7 @@ export default function AuthorDate(props) {
     
     return (
         <section className='description__author-date'>
-            <h3 className='description__author'>{props.videoDetailsData.channel}</h3>
+            <h3 className='description__author'>By {props.videoDetailsData.channel}</h3>
             <p className='description__date'>{dateConverted}</p>
         </section>
     )

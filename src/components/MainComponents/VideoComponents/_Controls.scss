@@ -4,20 +4,18 @@
 
 .controls{
     position: absolute;
-    top: 24rem;
+    bottom: 0.75rem;
     display: flex;
     justify-content: space-between;
     width:22rem;
     @include tablet{
-        position: absolute;
-        top: 27.75rem;
+        bottom: 1rem;
         display: flex;
         justify-content: space-between;
         width:45rem;
     }
     @include desktop{
-        position: absolute;
-        top: 33.75rem;
+        bottom: 1.325rem;
         display: flex;
         justify-content: space-between;
         width:55rem;
