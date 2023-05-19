@@ -3,11 +3,11 @@ import './Comments.scss';
 import UserImage from '../../../HeaderComponents/UserImage';
 import CommentForm from './CommentForm';
 import CommentsList from './CommentsList';
-import videoDetailsData from '../../../../data/video-details.json';
+// import videoDetailsData from '../../../../data/video-details.json';
 
-export default function Comments () {
-    let currentVideoData = videoDetailsData[0];
-    let commentsArray = currentVideoData.comments;
+export default function Comments ({ currentVideo }) {
+    // let currentVideoData = videoDetailsData[0];
+    let commentsArray = currentVideo.comments;
 
     return (
         <section className='comments'>
@@ -17,7 +17,7 @@ export default function Comments () {
                 <UserImage display="navbar__user-mobile" />
                 <CommentForm />
             </section>
-            <CommentsList currentVideoData = {commentsArray}/>
+            <CommentsList commentsArray = {commentsArray}/>
         </section>
     )
 }

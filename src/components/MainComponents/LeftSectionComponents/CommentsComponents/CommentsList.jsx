@@ -10,10 +10,10 @@ const convertDate = (date) => {
 }
 
 
-export default function CommentsList (props){
+export default function CommentsList ( { commentsArray }){
     return (
         <>
-            {props.currentVideoData.map(comment =>{
+            {commentsArray.map(comment =>{
                 return (
                     <Comment
                         key = {comment.id}

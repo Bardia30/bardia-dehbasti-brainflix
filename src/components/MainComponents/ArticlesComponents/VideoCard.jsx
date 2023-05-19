@@ -5,7 +5,7 @@ import './VideoCard.scss';
 
 export default function VideoCard(props) {
     return (
-        <section className='video-card'>
+        <section className='video-card' onClick={props.handleVideoSelect}>
             <div className='video-card__pic-parent'>
                 <img className="video-card__pic" src={props.url} alt={props.altText}/>
             </div>

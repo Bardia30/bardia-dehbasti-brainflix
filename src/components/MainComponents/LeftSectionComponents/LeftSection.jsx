@@ -5,11 +5,11 @@ import Comments from './CommentsComponents/Comments';
 
 
 
-export default function LeftSection() {
+export default function LeftSection({ currentVideo }) {
     return (
         <div className='left-section'>
-            <Description/>
-            <Comments/>
+            <Description currentVideo={currentVideo}/>
+            <Comments currentVideo={currentVideo}/>
         </div>
     )
 }
