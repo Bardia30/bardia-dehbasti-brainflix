@@ -1,4 +1,5 @@
 import React from 'react';
+import '../HeaderComponents/Header.scss';
 
 
 export default function UploadSection (props) {

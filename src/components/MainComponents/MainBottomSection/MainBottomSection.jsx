@@ -1,4 +1,5 @@
 import React from 'react';
+import './MainBottomSection.scss';
 import LeftSection from '../LeftSectionComponents/LeftSection';
 import Articles from '../ArticlesComponents/Articles';
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import './Description.scss';
 import {convertDate} from '../CommentsComponents/CommentsList';
 
 

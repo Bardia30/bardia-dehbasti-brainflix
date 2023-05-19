@@ -1,4 +1,5 @@
 import React from 'react';
+import './Articles.scss';
 import VideoCard from './VideoCard';
 import videoData from '../../../data/videos.json';
 

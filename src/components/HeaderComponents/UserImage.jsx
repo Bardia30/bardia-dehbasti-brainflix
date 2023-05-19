@@ -1,4 +1,5 @@
 import React from 'react';
+import './Header.scss';
 import userImg from '../../assets/Images/Mohan-muruge.jpg';
 
 export default function UserImage (props) {

@@ -1,4 +1,6 @@
 import React from 'react';
+import './Comments.scss';
+import '../../../HeaderComponents/Header.scss';
 import commentIcon from '../../../../assets/Icons/add_comment.svg';
 import Search from '../../../HeaderComponents/Search';
 import Upload from '../../../HeaderComponents/Upload';

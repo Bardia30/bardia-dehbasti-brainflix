@@ -1,4 +1,5 @@
 import React from 'react';
+import './FullScreenSound.scss';
 import fullScreen from '../../../assets/Icons/fullscreen.svg';
 import volume from '../../../assets/Icons/volume_up.svg';
 

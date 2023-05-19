@@ -1,4 +1,5 @@
 import React from 'react';
+import './Video.scss';
 import Controls from './Controls';
 
 export default function Video(props) {

@@ -1,4 +1,5 @@
 import React from 'react';
+import './Header.scss';
 import SearchSection from '../UIHeader/SearchSection';
 
 

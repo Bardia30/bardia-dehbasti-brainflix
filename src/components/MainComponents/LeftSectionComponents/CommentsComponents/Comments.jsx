@@ -1,4 +1,5 @@
 import React from 'react';
+import './Comments.scss';
 import UserImage from '../../../HeaderComponents/UserImage';
 import CommentForm from './CommentForm';
 import CommentsList from './CommentsList';

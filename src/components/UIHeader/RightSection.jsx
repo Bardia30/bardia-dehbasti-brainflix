@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../HeaderComponents/Header.scss';
 
 export default function RightSection (props) {
     return (

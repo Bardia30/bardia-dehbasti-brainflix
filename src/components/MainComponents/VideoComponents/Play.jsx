@@ -1,5 +1,6 @@
 import React from 'react';
 import playIcon from '../../../assets/Icons/play.svg';
+import './Play.scss';
 
 
 function Play() {

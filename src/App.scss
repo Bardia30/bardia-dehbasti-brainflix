@@ -1,21 +1,9 @@
 @use './styles/partials/fonts' as*;
-@use './components/HeaderComponents/header' as*;
+
 @use './styles/partials/mixins' as*;
 @use './styles/partials/variables' as*;
-@use './components/MainComponents/VideoComponents/video' as*;
-@use './components/MainComponents/MainBottomSection/mainBottomSection' as*;
-@use './components/MainComponents/leftSectionUI/leftSection' as*;
-@use './components/MainComponents/LeftSectionComponents/DescriptionComponents/description' as*;
-@use './components/MainComponents/ArticlesComponents/articles' as*;
-@use './components/MainComponents/ArticlesComponents/videoCard' as*;
-@use './components/MainComponents/LeftSectionComponents/CommentsComponents/comments' as*;
-@use './components/MainComponents/LeftSectionComponents/CommentsComponents/previousComment' as*;
-@use './components/MainComponents/VideoComponents/Play' as*;
-@use './components/MainComponents/VideoComponents/Controls' as*;
 
-@use './components/MainComponents/VideoComponents/ProgressBar' as*;
 
-@use './components/MainComponents/VideoComponents/FullScreenSound' as*;
 
 body {
     margin: 0;

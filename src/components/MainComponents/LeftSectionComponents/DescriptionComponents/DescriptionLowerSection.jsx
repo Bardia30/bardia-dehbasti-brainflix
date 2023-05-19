@@ -1,4 +1,5 @@
 import React from 'react';
+import './Description.scss';
 import AuthorDate from './AuthorDate';
 import Statistics from './Statistics';
 

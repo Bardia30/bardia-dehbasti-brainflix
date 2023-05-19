@@ -1,4 +1,5 @@
 import React from 'react';
+import './Description.scss';
 import StatisticsSub from './StatisticsSub';
 import viewIcon from '../../../../assets/Icons/views.svg';
 import likesIcon from '../../../../assets/Icons/likes.svg';
