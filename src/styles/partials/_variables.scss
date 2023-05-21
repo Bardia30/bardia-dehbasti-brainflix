@@ -1,3 +1,4 @@
+$font: "avenir";
 $primary-text-colour:#323232;
 $primary-cta-color:#0095FF;
 $secondary-text-color: #AFAFAF;
@@ -8,3 +9,8 @@ $divider-color: #E1E1E1; //mercury
 $form-background:#FAFAFA;
 $desktop-breakpoint: 1280px;
 $tablet-breakpoint: 768px;
+$input-border: solid 1px $divider-color;
+$transition: 0.25s ease-in-out;
+$input-focus-border: solid 2px $primary-cta-color;
+$divider: 2px solid $divider-color;
+$video-overlay:rgba(0, 0, 0, 0.5);

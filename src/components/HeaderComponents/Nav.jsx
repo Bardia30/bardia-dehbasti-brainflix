@@ -1,5 +1,5 @@
 import React from 'react';
-import '../HeaderComponents/Header.scss';
+import './Header.scss';
 
 
 export default function Nav(props) {

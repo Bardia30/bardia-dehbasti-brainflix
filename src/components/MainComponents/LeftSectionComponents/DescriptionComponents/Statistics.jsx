@@ -13,11 +13,13 @@ export default function Statistics({ currentVideo }) {
                 className="description__statistics--left"
                 icon={viewIcon}
                 count={currentVideo.views}
+                description="views-icon"
             />
             <StatisticsSub
                 className="description__statistics--right"
                 icon={likesIcon}
                 count={currentVideo.likes}
+                description="likes-icon"
             />
         </section>
     )

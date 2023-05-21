@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.scss';
-import UploadSection from '../UIHeader/UploadSection';
+import UploadSection from './UploadSection';
 
 
 

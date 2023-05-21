@@ -16,18 +16,17 @@
 }
 
 //styling for flexbox positioning
-@mixin flex($align: normal, $justify:normal, $direction:row, $wrap: nowrap, $gap:5vw) {
+@mixin flex($align: normal, $justify:normal, $direction:row, $wrap: nowrap) {
     display: flex;
     justify-content: $justify;
     align-items: $align;
     flex-direction:$direction;
     flex-wrap:$wrap;
-    column-gap: $gap;
 }
 
 
 //styling for fonts
-@mixin font($size:1rem, $weight: 500, $color:$primary-text-colour ,$line:normal) {
+@mixin font($size:1rem, $weight: 400, $color:$primary-text-colour ,$line:normal) {
     font-family:'avenir';
     font-size:$size;
     font-weight:$weight;
@@ -49,25 +48,18 @@
 
 
 //styling for buttons
-@mixin btn ($w:100%){
-    width:$w;
-    height:3.25rem;
-    background-color: $primary-bg-color;
-    //color:$alternative-background;
-    text-transform: uppercase;
-    // font-size:1rem;
-    // font-weight:500;
-    @include font($size:1.25rem, $weight:400, $color:$alternative-background);
-    border:none;
+@mixin btn {
+    @include flex($align:center);
+    margin: 0 2rem;
+    background-color: $primary-cta-color;
     border-radius:4px;
-    letter-spacing: 0.05rem;
-    align-self: flex-end;
-    margin-top:1.25rem;
-    margin-bottom:0.5rem;
-    cursor: pointer;
-    transition: $transition;
+    padding: 0.75rem 1rem;
+    width:100%;
+    border:none;
+    cursor:pointer;
+    transition: 0.5s ease-in-out;
     &:hover{
-        background-color: black;
+        background-color: $hover-cta-color;
     }
 }
 
@@ -83,3 +75,9 @@
 }
 
 
+@mixin profile-pic{
+    height:3rem;
+    width:3rem;
+    border-radius:50%;
+    overflow: hidden;
+}

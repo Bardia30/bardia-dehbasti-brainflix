@@ -1,8 +1,8 @@
 import React from 'react';
 import './Header.scss';
 import brainFlixLogo from '../../assets/Logo/BrainFlix-logo.svg';
-import Nav from '../UIHeader/Nav';
-import RightSection from '../UIHeader/RightSection';
+import Nav from './Nav';
+import RightSection from './RightSection';
 import Search from './Search';
 import Upload from './Upload';
 import UserImage from './UserImage';

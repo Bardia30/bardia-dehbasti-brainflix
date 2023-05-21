@@ -5,10 +5,7 @@
 
 .video {
     background: $video-component-color;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    @include flex($justify:center, $align:center, $direction:column);
     position:relative;
     &__video-element{
         width:100vw;

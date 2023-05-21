@@ -1,5 +1,4 @@
 @use './styles/partials/fonts' as*;
-
 @use './styles/partials/mixins' as*;
 @use './styles/partials/variables' as*;
 
@@ -9,5 +8,5 @@ body {
     margin: 0;
     box-sizing: border-box;
     background: $primary-background;
-    font-family: "avenir";
+    font-family: $font;
 }

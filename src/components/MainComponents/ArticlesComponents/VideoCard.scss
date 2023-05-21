@@ -2,15 +2,14 @@
 @use '../../../styles/partials/variables' as *;
 
 .video-card{
-    padding-top:1rem;
-    padding-bottom:1rem;
+    padding: 1rem 0;
     display:flex;
     cursor: pointer;
     &__pic-parent{
         width:8rem;
         height:5rem;
         overflow: hidden;
-        border-radius: 5px;;
+        border-radius: 5px;
     }
     &__pic{
         width:8rem;
@@ -19,21 +18,16 @@
 
     &__title{
         margin:0;
-        font-size:1rem;
-        font-weight:600;
-        color: $primary-text-colour;
+        @include font($weight:600);
         width:12rem;
     }
     &__author{
         margin:0;
-        font-size:1rem;
-        font-weight:500;
         color: $primary-text-colour;
+        @include font;
     }
     &__texts {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding-left: 1rem;;
+        @include flex($direction:column, $justify:space-between);
+        padding-left: 1rem;
     }
 }

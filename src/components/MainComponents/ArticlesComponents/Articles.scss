@@ -2,17 +2,14 @@
 @use '../../../styles/partials/mixins' as*;
 
 .articles{
-    
     padding-top:1.75rem;
-    border-top: 2px solid $divider-color;
+    border-top: $divider;
     padding-bottom:0.75rem;
     @include tablet{
-        border-top: 2px solid $divider-color;
         padding-bottom:1.75rem;
     }
     @include desktop{
         padding-left:2rem;
-        padding-top:1.75rem;
         border-left: 2px solid $divider-color;
         border-top:none;
     }
@@ -20,20 +17,11 @@
 
     &__title{
         text-transform: uppercase;
-        font-size:0.875rem;
-        font-weight:600;
-        color: $secondary-text-color;
+        @include font($color:$secondary-text-color, $weight:600, $size:0.875rem);
         margin: 0;
         padding-bottom: 0.5rem;
         @include tablet{
             padding-bottom: 0.75rem;
-        }
-        @include desktop{
-            text-transform: uppercase;
-            font-size:0.875rem;
-            font-weight:600;
-            color: $secondary-text-color;
-            margin: 0;
         }
     }
 }

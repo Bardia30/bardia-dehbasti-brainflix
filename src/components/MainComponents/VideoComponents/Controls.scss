@@ -5,19 +5,14 @@
 .controls{
     position: absolute;
     bottom: 0.75rem;
-    display: flex;
-    justify-content: space-between;
+    @include flex($justify:space-between);
     width:22rem;
     @include tablet{
         bottom: 1rem;
-        display: flex;
-        justify-content: space-between;
         width:45rem;
     }
     @include desktop{
         bottom: 1.325rem;
-        display: flex;
-        justify-content: space-between;
         width:55rem;
     }
 }

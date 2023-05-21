@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.scss';
-import SearchSection from '../UIHeader/SearchSection';
+import SearchSection from './SearchSection';
 
 
 export default function Search(props) {
