@@ -20,7 +20,9 @@
             flex-direction:row;
         }
     }
-
+    &__upload-link{
+        text-decoration: none;
+    }
     &__search-section{
 
         @include flex($align:center);

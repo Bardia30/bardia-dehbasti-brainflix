@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Video from './VideoComponents/Video';
-import MainBottomSection from './MainBottomSection/MainBottomSection';
-import detailVideosData from '../../data/video-details.json';
-import videosData from '../../data/videos.json';
+import Video from '../components/MainComponents/VideoComponents/Video';
+import MainBottomSection from '../components/MainComponents/MainBottomSection/MainBottomSection';
+import detailVideosData from '../data/video-details.json';
+import videosData from '../data/videos.json';
 
 export default function Main() {
     

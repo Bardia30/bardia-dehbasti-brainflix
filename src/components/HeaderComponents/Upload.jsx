@@ -4,6 +4,7 @@ import UploadSection from './UploadSection';
 
 
 
+
 export default function Upload(props){
     return (
         <UploadSection sectionClass={props.classUpload}>
