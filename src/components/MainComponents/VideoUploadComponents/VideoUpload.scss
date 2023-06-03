@@ -4,12 +4,27 @@
 
 .upload-page {
     padding: 2rem 6.5rem; 
+    @include tablet {
+        padding: 2rem; 
+    }
+    @include desktop {
+        padding: 2rem 6.5rem; 
+    }
+    
     border-top: $input-border;
     &__title{
         @include font($size:2.0625rem, $weight:600);
         line-height: 2.75rem;
         margin:0;
         padding-bottom:1.325rem;
+        @include tablet {
+            font-size: 2.5rem;
+        }
+        @include desktop {
+            @include font($size:2.0625rem, $weight:600);
+            
+        }
+        
     }
 }
 
@@ -19,18 +34,38 @@
     border-bottom: $divider;
     @include flex;
     column-gap: 2rem;
+    @include tablet {
+        @include flex ($direction:column);
+        row-gap:2rem;
+    }
+    @include desktop {
+        @include flex;
+        row-gap:0; 
+    }
     &__title{
         text-transform: uppercase;
         @include font($weight:600, $color:$secondary-text-color);
         margin: 0;
+        padding-bottom:0.75rem;
         @include tablet{
             font-size:0.875rem;
         }
+        @include desktop {
+            padding-bottom:0;
+        }
     }
     &__thumbnail{
-        width:20rem;
+        
         border-radius: 6px;
+        @include tablet{
+            width:28rem;
+        }
+        @include desktop{
+            width:20rem;
+        }
+       
     }
+    
 }
 
 
@@ -67,7 +102,7 @@
             border: $input-focus-border;
         }
         @include tablet{
-            width: 26.5rem;
+            width: 95%;
             margin-right:2rem;
             height: auto;
             align-items: center;
