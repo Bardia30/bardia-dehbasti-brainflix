@@ -3,7 +3,8 @@
 
 
 .upload-page {
-    padding: 2rem 6.5rem; 
+    padding: 2rem 1rem 0 1rem; 
+    border-top: $divider;
     @include tablet {
         padding: 2rem; 
     }
@@ -11,9 +12,8 @@
         padding: 2rem 6.5rem; 
     }
     
-    border-top: $input-border;
     &__title{
-        @include font($size:2.0625rem, $weight:600);
+        @include font($size:1.875rem, $weight:600);
         line-height: 2.75rem;
         margin:0;
         padding-bottom:1.325rem;
@@ -29,13 +29,12 @@
 }
 
 .upload-section {
-    padding-top: 2rem;
-    border-top: $divider;
-    border-bottom: $divider;
-    @include flex;
+    @include flex($direction:column);
     column-gap: 2rem;
     @include tablet {
-        @include flex ($direction:column);
+        border-bottom: $divider;
+        padding-top: 2rem;
+        border-top: $divider;
         row-gap:2rem;
     }
     @include desktop {
@@ -55,10 +54,12 @@
         }
     }
     &__thumbnail{
-        
+        width:100%;
         border-radius: 6px;
+        margin-bottom:1rem;
         @include tablet{
             width:28rem;
+            margin:0;
         }
         @include desktop{
             width:20rem;
@@ -72,12 +73,15 @@
 .upload-form {
     display: flex;
     flex-direction: column;
+    @include tablet{
+        height:17rem;
+    }
     &__labels-and-inputs{
         @include flex($direction:column);
     }
     &__label {
         text-transform: uppercase;
-        @include font($weight:600, $color:$secondary-text-color);
+        @include font($size:0.95rem, $weight:600, $color:$secondary-text-color);
         margin: 0;
         @include tablet{
             font-size:0.875rem;
@@ -91,10 +95,10 @@
         @include flex($align:flex-start);
         border: $input-border;
         border-radius: 4px;
-        padding: 0.75rem 1.375rem;
-        width: 15rem;
-        height: 6rem;
-        margin-bottom:1.25rem;
+        padding: 0.75rem 1rem;
+        width: 83vw;
+        height:1.5rem;
+        margin-bottom:0.25rem;
         margin-top:0.5rem;
         background-color: $form-background;
         transition: $transition;
@@ -102,6 +106,7 @@
             border: $input-focus-border;
         }
         @include tablet{
+            padding: 0.75rem 1.375rem;
             width: 95%;
             margin-right:2rem;
             height: auto;
@@ -117,23 +122,39 @@
             
         }
         &--description{
-            height:3rem;
+            height:5.5rem;
             resize:none;
+            @include tablet{
+                height:6rem;
+            }
+            
         }
     }
 }
 
 .buttons-section{
-    display:flex;
-    align-self: flex-end;
-    position: relative;
-    top:5rem;
+    @include flex($direction:column-reverse);
+    margin: 2rem 0 3rem 0;
+    @include tablet {
+        display:flex;
+        flex-direction: row;
+        align-self: flex-end;
+        position: relative;
+        top:3rem;
+        padding-bottom:3rem;
+    }
+    
     &__cancel-cta{
         border:none;
         background:$primary-background;
         text-transform: uppercase;
-        @include font($size:0.875rem, $color:$primary-cta-color, $weight:600);
-        margin-right:2.5rem;
+        @include font($size:1rem, $color:$primary-cta-color, $weight:600);
+        margin-top: 2.5rem;
+        @include tablet{
+            margin-right:2.5rem;
+            margin-top:0;
+            font-size:0.875rem;
+        }
     }
 }
 
@@ -142,4 +163,5 @@
 
 .publish-button {
     margin-right:0;
+    width:100%;
 }
