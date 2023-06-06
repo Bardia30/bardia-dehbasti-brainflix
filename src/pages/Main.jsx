@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import Video from '../components/MainComponents/VideoComponents/Video';
 import MainBottomSection from '../components/MainComponents/MainBottomSection/MainBottomSection';
 import detailVideosData from '../data/video-details.json';
-import videosData from '../data/videos.json';
+import videosDataJson from '../data/videos.json';
 
 export default function Main() {
     
     const [currentVideo, setCurrentVideo] = useState(detailVideosData[0])
-    
+    const [videosData, setVideosData] = useState(videosDataJson) //ask if this is ok for 1st comment line
     
     const handleVideoSelect = (id) => {
         detailVideosData.forEach(video => {

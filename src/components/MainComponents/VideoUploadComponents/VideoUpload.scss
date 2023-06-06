@@ -62,7 +62,7 @@
             margin:0;
         }
         @include desktop{
-            width:20rem;
+            width:25.5rem;
         }
        
     }
@@ -115,7 +115,7 @@
         }
         @include desktop{
             margin-right: 0;
-            width: 47rem;
+            width: 42rem;
         }
         &::placeholder{
             @include font;

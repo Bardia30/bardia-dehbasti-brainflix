@@ -38,7 +38,7 @@
         border: $input-border;
         border-radius: 4px;
         padding: 0.75rem 1.375rem;
-        width: 15rem;
+        width: 64vw;
         height: 6rem;
         margin-bottom:1.25rem;
         margin-top:0.5rem;
@@ -48,7 +48,7 @@
             border: $input-focus-border;
         }
         @include tablet{
-            width: 26.5rem;
+            width: 60vw;
             margin-right:2rem;
             height: auto;
             align-items: center;
@@ -126,5 +126,13 @@
         @include desktop{
             width:36rem;
         }
+    }
+}
+
+
+.comments-cta{
+    width:72vw;
+    @include tablet{
+        width:auto;
     }
 }
