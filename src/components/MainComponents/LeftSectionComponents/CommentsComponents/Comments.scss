@@ -32,7 +32,10 @@
             width:auto;
         }
     }
-    &__search-section{
+    &__input-section{
+        position:relative
+    }
+    &__input{
         margin-left:0 ;
         @include flex($align:flex-start);
         border: $input-border;
@@ -44,13 +47,19 @@
         margin-top:0.5rem;
         background-color: $form-background;
         transition: $transition;
+        resize: none;
         &:focus-within{
             border: $input-focus-border;
+        }
+        &::placeholder{
+            @include font;
+            position: absolute;
+            top:0;
         }
         @include tablet{
             width: 52vw;
             margin-right:2rem;
-            height: auto;
+            height: 1.15rem;
             align-items: center;
             margin-bottom: 0;
         }
@@ -59,7 +68,7 @@
             width: 21rem;
         }
     }
-    &__input-label{
+    &__label{
         text-transform: uppercase;
         @include font($weight:600, $color:$secondary-text-color);
         margin: 0;

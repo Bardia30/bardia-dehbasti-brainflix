@@ -13,8 +13,8 @@ export default function CommentForm() {
     return (
         <form type="submit" className='comments__form'>
             <div className='comments__form-section'>
-                <label className='comments__input-label'>join the conversation</label>
-                <Search classSearch="comments__search-section" src={null} inputClass="navbar__search-input" placeHolder="Add a new comment" />
+                <label className='comments__label'>join the conversation</label>
+                <textarea type="text" placeholder='Add a new comment' className='comments__input'/>
             </div>
             <Upload classUpload="comments__cta" classImg="comments__cta-icon" classText="comments__cta-text" icon={commentIcon} alt="comment-icon" text="comment" />
         </form>
