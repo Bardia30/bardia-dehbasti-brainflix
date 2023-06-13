@@ -39,9 +39,9 @@ function Header(props) {
                 </div>
                     <Link className='navbar__upload-link' to='/upload'>
                         <Upload 
-                            classUpload="navbar__upload-section" 
-                            classImg="navbar__upload-icon" 
-                            classText="navbar__upload-text" 
+                            classUpload="cta" 
+                            classImg="cta__icon" 
+                            classText="cta__text" 
                             icon={uploadIcon} alt="search-icon" 
                             text="upload"
                         />

@@ -66,47 +66,6 @@
             }
         }
     }
-    &__upload-section{
-        @include flex($align:center);
-        margin: 0;
-        background-color: $primary-cta-color;
-        border-radius:4px;
-        padding: 0.75rem 1rem;
-        width:90vw;
-        border:none;
-        cursor:pointer;
-        transition: 0.5s ease-in-out;
-        &:hover{
-            background-color: $hover-cta-color;
-        }
-        @include tablet{
-            margin-left: 0;
-            margin-right:1rem;
-            width:10rem;
-        }
-        @include desktop{
-            margin-left: 2rem;
-            margin-right:2rem;
-        }
-    }
-    &__upload-text{
-        text-transform: uppercase;
-        margin:auto;
-        @include font($color:$form-background);
-        padding-right:1rem;
-        @include tablet{
-            font-size: 0.875rem;
-        }
-    }
-    &__upload-icon{
-        width: 1.5rem;
-        margin-right: 0.25rem;
-        @include tablet{
-            width: 1.25rem;
-            
-        }
-        
-    }
 
     &__logo{
         width:9rem;
@@ -137,5 +96,17 @@
     }
     &__user-img{
         height:3rem;
+    }
+}
+
+
+
+.cta {
+    @include cta;
+    &__icon{
+        @include cta-icon;
+    }
+    &__text{
+        @include cta-text;
     }
 }

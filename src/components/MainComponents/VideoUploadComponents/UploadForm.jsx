@@ -1,8 +1,12 @@
 import React from 'react';
-import Upload from '../../HeaderComponents/Upload';
 import publishIcon from '../../../assets/Icons/publish.svg';
+import PublishButton from './PublishButton';
+
 
 function UploadForm() {
+
+  
+
   return (
     <form className='upload-form'>
         <div className='upload-form__labels-and-inputs'>
@@ -14,13 +18,13 @@ function UploadForm() {
             
         <div className='buttons-section'>
             <button className='buttons-section__cancel-cta'>cancel</button>
-            <Upload
-            classUpload="navbar__upload-section publish-button" 
-            classImg="navbar__upload-icon" 
-            classText="navbar__upload-text"
-            icon={publishIcon} 
-            alt="publish-icon" 
-            text="publish"
+            <PublishButton
+              classUpload="buttons-section__publish-cta" 
+              classImg="buttons-section__publish-icon" 
+              classText="buttons-section__publish-text"
+              icon={publishIcon} 
+              alt="publish-icon" 
+              text="publish"
             />
         </div>
         </form>

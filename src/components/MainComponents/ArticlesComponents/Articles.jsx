@@ -16,9 +16,8 @@ export default function Articles({ currentVideo, videosData}){
                 .filter(video => video.id !== currentVideo.id)
                 .map(video => {
                 return (
-                    <Link to={`/${video.id}`}>
+                    <Link className='articles__link' key = {video.id} to={`/${video.id}`}>
                         <VideoCard
-                            
                             key = {video.id}
                             url={video.image}
                             title={video.title}

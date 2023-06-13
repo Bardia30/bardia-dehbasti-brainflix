@@ -32,7 +32,6 @@ function HomePage() {
 
     useEffect(() => {
         if (videoId){
-            console.log(videoId)
             setCurrentVideoId(videoId);
         }
     }, [videoId, videosData, videoDetailsData])

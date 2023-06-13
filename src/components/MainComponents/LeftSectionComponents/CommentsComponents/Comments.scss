@@ -48,7 +48,7 @@
             border: $input-focus-border;
         }
         @include tablet{
-            width: 60vw;
+            width: 52vw;
             margin-right:2rem;
             height: auto;
             align-items: center;
@@ -56,7 +56,7 @@
         }
         @include desktop{
             margin-right: 0;
-            width: 20rem;
+            width: 21rem;
         }
     }
     &__input-label{
@@ -67,6 +67,16 @@
             font-size:0.875rem;
         }
     }
+    &__cta {
+        @include cta($width-mobile:72vw);
+    }
+    &__cta-icon{
+            @include cta-icon;
+    }
+    &__cta-text{
+            @include cta-text;
+    }
+    
 }
 
 
@@ -130,9 +140,5 @@
 }
 
 
-.comments-cta{
-    width:72vw;
-    @include tablet{
-        width:auto;
-    }
-}
+
+

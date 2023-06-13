@@ -8,7 +8,7 @@ import Header from '../components/HeaderComponents/Header';
 function UploadPage() {
   return (
     <>
-      <Header />
+      <Header setCurrentVideoId={()=> {}}/>
       <section className='upload-page'>
           <h1 className='upload-page__title'>Upload Video</h1>
           <div className='upload-section'>
