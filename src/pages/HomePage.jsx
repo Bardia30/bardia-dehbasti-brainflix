@@ -9,13 +9,13 @@ import { useParams } from 'react-router-dom';
 function HomePage() {
 
     const [videoDetailsData, setVideoDetailsData] = useState()
-    const [videosData, setVideosData] = useState() //ask if this is ok for 1st comment line
+    const [videosData, setVideosData] = useState() 
     
     const APIUrlVideos =  'https://project-2-api.herokuapp.com/videos';
     const api_key = '?api_key=f5296aef-42b9-41cb-a604-bf1e079f7f17'
 
-//when clicked on homepage, the route is navigated back to
 
+    const [newCommentPosted, setNewCommentPosted] = useState(false);    
 
     useEffect(() => {
         axios.get(APIUrlVideos+api_key)
@@ -46,6 +46,25 @@ function HomePage() {
         }
     }, [videosData, currentVideoId])
 
+    const postComment = (newComment) => {
+        axios.post(`${APIUrlVideos}/${currentVideoId}/comments/${api_key}`, newComment)
+            .then(res => {
+                console.log(res.data)
+                setNewCommentPosted(true);
+            })
+            .catch(err => console.log(err.message))
+    }
+
+    useEffect(() => {
+        if (newCommentPosted) {
+            axios.get(`${APIUrlVideos}/${currentVideoId}/${api_key}`)
+            .then(res => {
+                setVideoDetailsData(res.data)
+            })
+            .catch(err => console.log(err.message))
+        }
+    }, [newCommentPosted, currentVideoId, videoDetailsData])
+
     return (
         <>
         <Header setCurrentVideoId={setCurrentVideoId}/>
@@ -55,7 +74,7 @@ function HomePage() {
                 <Video imageURL={videoDetailsData.image} />
             )}
             {videosData && videoDetailsData && (
-                <MainBottomSection videosData={videosData} currentVideo={videoDetailsData}/>
+                <MainBottomSection postComment={postComment} videosData={videosData} currentVideo={videoDetailsData}/>
             )}
             
         </main>

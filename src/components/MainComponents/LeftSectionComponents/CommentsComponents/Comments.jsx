@@ -5,7 +5,7 @@ import CommentForm from './CommentForm';
 import CommentsList from './CommentsList';
 // import videoDetailsData from '../../../../data/video-details.json';
 
-export default function Comments ({ currentVideo }) {
+export default function Comments ({ currentVideo, postComment }) {
     // let currentVideoData = videoDetailsData[0];
     let commentsArray = currentVideo.comments;
 
@@ -15,7 +15,7 @@ export default function Comments ({ currentVideo }) {
             <section className='comments__new-comment'>
                 <UserImage display="navbar__user-tabdesk"/>
                 <UserImage display="navbar__user-mobile" />
-                <CommentForm />
+                <CommentForm postComment={postComment}/>
             </section>
             <CommentsList commentsArray = {commentsArray}/>
         </section>

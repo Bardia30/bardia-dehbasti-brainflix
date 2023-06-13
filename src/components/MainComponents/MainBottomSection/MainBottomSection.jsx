@@ -3,10 +3,10 @@ import './MainBottomSection.scss';
 import LeftSection from '../LeftSectionComponents/LeftSection';
 import Articles from '../ArticlesComponents/Articles';
 
-export default function MainBottomSection ({ currentVideo, videosData}) {
+export default function MainBottomSection ({ currentVideo, videosData, postComment}) {
     return (
         <div className='main-bottom-section'>
-            <LeftSection currentVideo={currentVideo}/>
+            <LeftSection postComment={postComment} currentVideo={currentVideo}/>
             <Articles videosData={videosData}  currentVideo={currentVideo}/>
         </div>
     )
