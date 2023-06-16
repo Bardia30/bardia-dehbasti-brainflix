@@ -7,6 +7,7 @@
     bottom: 0.75rem;
     @include flex($justify:space-between);
     width:22rem;
+    cursor: pointer;
     @include tablet{
         bottom: 1rem;
         width:45rem;

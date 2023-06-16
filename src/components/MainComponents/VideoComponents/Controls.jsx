@@ -5,10 +5,10 @@ import ProgressBar from './ProgressBar';
 import FullScreenSound from './FullScreenSound';
 
 
-function Controls() {
+function Controls({ handlePlayButton }) {
   return (
     <div className='controls'>
-        <Play/>
+        <Play handlePlayButton={handlePlayButton}/>
         <ProgressBar/>
         <FullScreenSound/>
     </div>

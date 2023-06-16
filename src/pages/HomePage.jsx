@@ -14,19 +14,6 @@ function HomePage() {
     const APIUrlVideos =  'https://project-2-api.herokuapp.com/videos';
     const api_key = '?api_key=f5296aef-42b9-41cb-a604-bf1e079f7f17'
 
-
-    const [newCommentPosted, setNewCommentPosted] = useState(false);    
-
-
-    //to get the videosData (for articles)
-    useEffect(() => {
-        axios.get(APIUrlVideos+api_key)
-            .then((res) => {
-                setVideosData(res.data);
-            })
-            .catch(err => console.log(err.message))
-    }, [])
-
     //a state that hold the id of the current id, to show on video player, the first one as default
     const [currentVideoId, setCurrentVideoId] = useState("84e96018-4022-434e-80bf-000ce4cd12b8");
     
@@ -34,46 +21,32 @@ function HomePage() {
     const { videoId } = params;
 
 
-    //checks to see if dynamic url videoId exist, then changes currentVideoId to the id on the dynamic url route
+    //to get the videosData (for articles)
     useEffect(() => {
-        if (videoId){
-            setCurrentVideoId(videoId);
-        }
-    }, [videoId, videosData, videoDetailsData])
-
-    //checks if videosData and currentVideoId exist, and then makes a request to videos/:videoId api to get video details data, and sets state
-    useEffect(() => {
-        if (videosData && currentVideoId) {
-            axios.get(`${APIUrlVideos}/${currentVideoId}/${api_key}`)
+        axios.get(APIUrlVideos+api_key)
+            .then((res) => {
+                setVideosData(res.data);
+                if (videoId) {
+                    setCurrentVideoId(videoId);
+                }
+                return res.data;
+            })
+            .then(videosData => {
+                if (videosData && currentVideoId) {
+                    return axios.get(`${APIUrlVideos}/${currentVideoId}/${api_key}`)
+                }
+            })
             .then(res => {
-                setVideoDetailsData(res.data)
+                if (res) {
+                    //eslint-disable-next-line react-hooks/exhaustive-deps
+                    setVideoDetailsData(res.data)
+                }
             })
             .catch(err => console.log(err.message))
-        }
-    }, [videosData, currentVideoId])
 
+            
+    }, [videoId, currentVideoId])
 
-
-    //function that posts new comment 
-    const postComment = (newComment) => {
-        axios.post(`${APIUrlVideos}/${currentVideoId}/comments/${api_key}`, newComment)
-            .then(res => {
-                console.log(res.data)
-                setNewCommentPosted(true);
-            })
-            .catch(err => console.log(err.message))
-    }
-
-    //checks if there is a new comments posted then, requests another axios request for rendering the details video
-    useEffect(() => {
-        if (newCommentPosted) {
-            axios.get(`${APIUrlVideos}/${currentVideoId}/${api_key}`)
-            .then(res => {
-                setVideoDetailsData(res.data)
-            })
-            .catch(err => console.log(err.message))
-        }
-    }, [newCommentPosted, currentVideoId, videoDetailsData])
 
     return (
         <>
@@ -81,10 +54,10 @@ function HomePage() {
         
         <main className='main'>
             {videoDetailsData && (
-                <Video imageURL={videoDetailsData.image} />
+                <Video imageUrl={videoDetailsData.image} videoUrl = {`${videoDetailsData.video}${api_key}`}/>
             )}
             {videosData && videoDetailsData && (
-                <MainBottomSection postComment={postComment} videosData={videosData} currentVideo={videoDetailsData}/>
+                <MainBottomSection setVideoDetailsData={setVideoDetailsData} currentVideoId={currentVideoId} videosData={videosData} currentVideo={videoDetailsData}/>
             )}
             
         </main>
