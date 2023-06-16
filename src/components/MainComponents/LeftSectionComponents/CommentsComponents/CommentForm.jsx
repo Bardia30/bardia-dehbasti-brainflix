@@ -7,7 +7,7 @@ import Upload from '../../../HeaderComponents/Upload';
 
 
 
-export default function CommentForm({ currentVideoId, setVideoDetailsData, currentVideo }) {
+export default function CommentForm({ currentVideoId, setVideoDetailsData, commentsArray}) {
     
     const [newComment, setNewComment] = useState("")
     
@@ -46,7 +46,7 @@ export default function CommentForm({ currentVideoId, setVideoDetailsData, curre
             })
             .catch(err => console.log(err.message))
         }
-    }, [newCommentPosted, currentVideoId, currentVideo])
+    }, [newCommentPosted, currentVideoId, commentsArray])
     
     return (
         <form onSubmit={handleSubmit} type="submit" className='comments__form'>

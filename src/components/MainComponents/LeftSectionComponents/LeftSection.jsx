@@ -9,7 +9,7 @@ export default function LeftSection({ currentVideo, currentVideoId, setVideoDeta
     return (
         <div className='left-section'>
             <Description currentVideo={currentVideo}/>
-            <Comments setVideoDetailsData={setVideoDetailsData} currentVideoId={currentVideoId} currentVideo={currentVideo}/>
+            <Comments setVideoDetailsData={setVideoDetailsData} currentVideoId={currentVideoId} commentsArray={currentVideo.comments}/>
         </div>
     )
 }
