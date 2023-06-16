@@ -17,6 +17,8 @@ function HomePage() {
 
     const [newCommentPosted, setNewCommentPosted] = useState(false);    
 
+
+    //to get the videosData (for articles)
     useEffect(() => {
         axios.get(APIUrlVideos+api_key)
             .then((res) => {
@@ -25,17 +27,21 @@ function HomePage() {
             .catch(err => console.log(err.message))
     }, [])
 
+    //a state that hold the id of the current id, to show on video player, the first one as default
     const [currentVideoId, setCurrentVideoId] = useState("84e96018-4022-434e-80bf-000ce4cd12b8");
     
     const params = useParams();
     const { videoId } = params;
 
+
+    //checks to see if dynamic url videoId exist, then changes currentVideoId to the id on the dynamic url route
     useEffect(() => {
         if (videoId){
             setCurrentVideoId(videoId);
         }
     }, [videoId, videosData, videoDetailsData])
 
+    //checks if videosData and currentVideoId exist, and then makes a request to videos/:videoId api to get video details data, and sets state
     useEffect(() => {
         if (videosData && currentVideoId) {
             axios.get(`${APIUrlVideos}/${currentVideoId}/${api_key}`)
@@ -46,6 +52,9 @@ function HomePage() {
         }
     }, [videosData, currentVideoId])
 
+
+
+    //function that posts new comment 
     const postComment = (newComment) => {
         axios.post(`${APIUrlVideos}/${currentVideoId}/comments/${api_key}`, newComment)
             .then(res => {
@@ -55,6 +64,7 @@ function HomePage() {
             .catch(err => console.log(err.message))
     }
 
+    //checks if there is a new comments posted then, requests another axios request for rendering the details video
     useEffect(() => {
         if (newCommentPosted) {
             axios.get(`${APIUrlVideos}/${currentVideoId}/${api_key}`)
