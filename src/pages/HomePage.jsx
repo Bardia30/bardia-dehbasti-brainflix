@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Video from '../components/MainComponents/VideoComponents/Video';
 import MainBottomSection from '../components/MainComponents/MainBottomSection/MainBottomSection';
-import Header from '../components/HeaderComponents/Header';
 import { useParams } from 'react-router-dom';
 
 
@@ -20,7 +19,6 @@ function HomePage() {
     const params = useParams();
     const { videoId } = params;
 
-
     //to get the videosData (for articles)
     useEffect(() => {
         axios.get(APIUrlVideos+api_key)
@@ -28,6 +26,9 @@ function HomePage() {
                 setVideosData(res.data);
                 if (videoId) {
                     setCurrentVideoId(videoId);
+                } 
+                if (videoId === undefined) {
+                    setCurrentVideoId("84e96018-4022-434e-80bf-000ce4cd12b8")
                 }
                 return res.data;
             })
@@ -49,9 +50,6 @@ function HomePage() {
 
     
     return (
-        <>
-        <Header setCurrentVideoId={setCurrentVideoId}/>
-        
         <main className='main'>
             {videoDetailsData && (
                 <Video imageUrl={videoDetailsData.image} videoUrl = {`${videoDetailsData.video}${api_key}`}/>
@@ -61,7 +59,6 @@ function HomePage() {
             )}
             
         </main>
-        </>
     )
 }
 

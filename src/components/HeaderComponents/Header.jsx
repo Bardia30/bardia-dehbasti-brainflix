@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Header.scss';
 import brainFlixLogo from '../../assets/Logo/BrainFlix-logo.svg';
 import Nav from './Nav';
@@ -11,21 +11,17 @@ import uploadIcon from '../../assets/Icons/upload.svg';
 import searchIcon from '../../assets/Icons/search.svg';
 
 
-
-
-function Header(props) {
-    
+function Header() {
+    const navigate = useNavigate();
     const handleLogoClick = () => {
-        props.setCurrentVideoId("84e96018-4022-434e-80bf-000ce4cd12b8")
+        // props.setCurrentVideoId("84e96018-4022-434e-80bf-000ce4cd12b8")
+        navigate('/')
     }
-    
     
     return (
         <header>
             <Nav>
-                <Link onClick={handleLogoClick} className='navbar__logo-link' to='/'>
-                    <img className="navbar__logo" src={brainFlixLogo} alt="BrainFlix-logo"/>
-                </Link>
+                <img onClick={handleLogoClick} className="navbar__logo" src={brainFlixLogo} alt="BrainFlix-logo"/>
                 <RightSection>
                 <div className='navbar__search-user'>
                     <Search
