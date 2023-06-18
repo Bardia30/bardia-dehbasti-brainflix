@@ -2,10 +2,6 @@ import React from 'react';
 import './Articles.scss';
 import VideoCard from './VideoCard';
 import { Link } from 'react-router-dom';
-// import videoData from '../../../data/videos.json';
-
-
-
 
 
 export default function Articles({ currentVideo, videosData}){

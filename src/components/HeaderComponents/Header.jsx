@@ -14,7 +14,6 @@ import searchIcon from '../../assets/Icons/search.svg';
 function Header() {
     const navigate = useNavigate();
     const handleLogoClick = () => {
-        // props.setCurrentVideoId("84e96018-4022-434e-80bf-000ce4cd12b8")
         navigate('/')
     }
     
