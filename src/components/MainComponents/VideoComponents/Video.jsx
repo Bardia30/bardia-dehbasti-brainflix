@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Video.scss';
 import Controls from './Controls';
 
-export default function Video({ imageUrl, videoUrl }) {
+export default function Video({ imageUrl }) {
     
     const [isPlaying, setIsPlaying] = useState(false);
     
@@ -12,7 +12,7 @@ export default function Video({ imageUrl, videoUrl }) {
 
     return (
         <div className='video'>
-            <video src={videoUrl} autoPlay={isPlaying} className='video__video-element' poster={imageUrl}></video>
+            <video autoPlay={isPlaying} className='video__video-element' poster={`http://localhost:5050/${imageUrl}`}></video>
             <Controls handlePlayButton={handlePlayButton}/>
         </div>
     )
