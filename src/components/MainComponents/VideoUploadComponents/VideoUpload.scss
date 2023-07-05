@@ -134,7 +134,7 @@
 }
 
 .buttons-section{
-    @include flex($direction:column-reverse);
+    @include flex($direction:column-reverse, $align:center, $justify:center);
     margin: 2rem 0 3rem 0;
     @include tablet {
         flex-direction: row;
@@ -145,15 +145,20 @@
     }
     
     &__cancel-cta{
+        display: flex;
         border:none;
         background:$primary-background;
         text-transform: uppercase;
+        align-items: center;
+        justify-content: center;
         @include font($size:1rem, $color:$primary-cta-color, $weight:600);
         margin-top: 2.5rem;
+        cursor: pointer;
         @include tablet{
             margin-right:2.5rem;
             margin-top:0;
             font-size:0.875rem;
+            width:10rem;
         }
     }
     &__publish-cta{
