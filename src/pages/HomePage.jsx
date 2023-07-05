@@ -39,7 +39,7 @@ function HomePage() {
                 return res.data;
             })
             //if another video has been clicked, do an axios call to get the detail video data 
-            .then((res)=> {
+            .then(()=> {
                 if (currentVideoId) {
                     axios.get(`${APIUrlVideos}/${currentVideoId}`)
                     .then(res => {
