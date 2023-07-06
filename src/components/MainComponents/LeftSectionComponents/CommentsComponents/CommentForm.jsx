@@ -18,7 +18,7 @@ export default function CommentForm({ currentVideoId, setVideoDetailsData, comme
     const [newCommentPosted, setNewCommentPosted] = useState(false);   
 
     const postComment = (newComment) => {
-        axios.post(`https://project-2-api.herokuapp.com/videos/${currentVideoId}/comments/?api_key=f5296aef-42b9-41cb-a604-bf1e079f7f17`, newComment)
+        axios.post(`http://localhost:5050/videos/${currentVideoId}/comments`, newComment)
             .then(res => {
                 console.log(res.data)
                 setNewCommentPosted(true);
@@ -31,8 +31,7 @@ export default function CommentForm({ currentVideoId, setVideoDetailsData, comme
         e.preventDefault();
         const user_comment = e.target.comment.value;
         const newComment = {
-            "name" : "Nigel",
-            "comment": user_comment
+            comment: user_comment
         }
         postComment(newComment);
         setNewComment("");
@@ -40,7 +39,7 @@ export default function CommentForm({ currentVideoId, setVideoDetailsData, comme
 
     useEffect(() => {
         if (newCommentPosted) {
-            axios.get(`https://project-2-api.herokuapp.com/videos/${currentVideoId}/?api_key=f5296aef-42b9-41cb-a604-bf1e079f7f17`)
+            axios.get(`http://localhost:5050/videos/${currentVideoId}`)
             .then(res => {
                 setVideoDetailsData(res.data)
             })
