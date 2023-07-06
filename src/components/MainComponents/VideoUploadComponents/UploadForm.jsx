@@ -6,7 +6,11 @@ import axios from 'axios';
 
 
 function UploadForm() {
+  const apiUrl = 'http://localhost:5050/videos';
+
   const navigate = useNavigate();
+
+
   const [titleValue, setTitleValue] = useState('');
   const [descriptionValue, setDescriptionValue] = useState('');
   
@@ -32,13 +36,17 @@ function UploadForm() {
       videoTitle: userTitle,
       videoDescription: userDescription
     }
-
+    
     //TODO: write axios post request to the backend API
+    axios.post(apiUrl, newObj)
+      .then(res => {
+        console.log(res.data)
+      })
+      .catch(err => console.log(err.message));
     
-    
-    
-    alert(`Your Video titled "${userTitle}" has been uploaded!`); 
-    navigate('/');
+    //TODO: uncomment this later
+    //alert(`Your Video titled "${userTitle}" has been uploaded!`); 
+    //navigate('/');   
   }
 
   const cancelClickHandler = (e) => {
