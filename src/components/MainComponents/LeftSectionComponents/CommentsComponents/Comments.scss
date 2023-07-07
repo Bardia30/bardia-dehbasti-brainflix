@@ -146,6 +146,17 @@
             width:36rem;
         }
     }
+    &__delete-and-date{
+        @include flex($align: flex-end, $justify: space-between);
+        width: 9rem;
+    }
+    &__delete{
+        cursor: pointer;
+        &:hover{
+                fill:red;
+            
+        }
+    }
 }
 
 

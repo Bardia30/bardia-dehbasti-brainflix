@@ -7,7 +7,7 @@ import Upload from '../../../HeaderComponents/Upload';
 
 
 
-export default function CommentForm({ currentVideoId, setVideoDetailsData, commentsArray}) {
+export default function CommentForm({ currentVideoId, setVideoDetailsData, commentsArray, commentDeleted}) {
     
     const [newComment, setNewComment] = useState("")
     
@@ -16,6 +16,7 @@ export default function CommentForm({ currentVideoId, setVideoDetailsData, comme
     }
 
     const [newCommentPosted, setNewCommentPosted] = useState(false);   
+    
 
     const postComment = (newComment) => {
         axios.post(`http://localhost:5050/videos/${currentVideoId}/comments`, newComment)
@@ -38,14 +39,14 @@ export default function CommentForm({ currentVideoId, setVideoDetailsData, comme
     }
 
     useEffect(() => {
-        if (newCommentPosted) {
+        if (newCommentPosted || commentDeleted) {
             axios.get(`http://localhost:5050/videos/${currentVideoId}`)
             .then(res => {
                 setVideoDetailsData(res.data)
             })
             .catch(err => console.log(err.message))
         }
-    }, [newCommentPosted, currentVideoId, commentsArray])
+    }, [newCommentPosted, currentVideoId, commentsArray, commentDeleted])
     
     return (
         <form onSubmit={handleSubmit} type="submit" className='comments__form'>
