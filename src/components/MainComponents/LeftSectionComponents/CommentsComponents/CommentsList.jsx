@@ -12,11 +12,14 @@ const convertDate = (date) => {
 }
 
 
-export default function CommentsList ( { commentsArray, setCommentDeleted }){
+export default function CommentsList ( { commentsArray, setCommentDeleted, currentVideoId }){
     
-    const params = useParams();
-    const { videoId } = params; 
+    // const params = useParams();
+    // const { videoId } = params; 
 
+    // if (videoId === undefined) {
+    //     videoId === ""
+    // }
 
     const sendDeleteRequest = (videoId, commentId) => {
         axios.delete(`http://localhost:5050/videos/${videoId}/comments/${commentId}`)
@@ -34,7 +37,7 @@ export default function CommentsList ( { commentsArray, setCommentDeleted }){
             {commentsArray.map(comment =>{
                 return (
                     <Comment
-                        videoId={videoId}
+                        videoId={currentVideoId}
                         sendDeleteRequest={sendDeleteRequest}
                         key = {comment.id}
                         commentId = {comment.id}

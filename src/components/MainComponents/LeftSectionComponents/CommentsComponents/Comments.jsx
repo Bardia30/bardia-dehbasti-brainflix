@@ -17,7 +17,7 @@ export default function Comments ({ commentsArray, currentVideoId, setVideoDetai
                 <UserImage display="navbar__user-mobile" />
                 <CommentForm commentDeleted={commentDeleted} commentsArray={commentsArray} setVideoDetailsData={setVideoDetailsData}  currentVideoId={currentVideoId}/>
             </section>
-            <CommentsList setCommentDeleted={setCommentDeleted} commentsArray = {commentsArray}/>
+            <CommentsList currentVideoId={currentVideoId} setCommentDeleted={setCommentDeleted} commentsArray = {commentsArray}/>
         </section>
     )
 }
