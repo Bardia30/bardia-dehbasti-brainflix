@@ -2,7 +2,6 @@ import React from "react";
 import './Comments.scss';
 import Comment from "./Comment";
 import axios from 'axios';
-import { useParams } from "react-router-dom";
 
 
 
@@ -14,12 +13,6 @@ const convertDate = (date) => {
 
 export default function CommentsList ( { commentsArray, setCommentDeleted, currentVideoId }){
     
-    // const params = useParams();
-    // const { videoId } = params; 
-
-    // if (videoId === undefined) {
-    //     videoId === ""
-    // }
 
     const sendDeleteRequest = (videoId, commentId) => {
         axios.delete(`http://localhost:5050/videos/${videoId}/comments/${commentId}`)

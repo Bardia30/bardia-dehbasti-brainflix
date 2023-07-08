@@ -8,7 +8,7 @@ import Comments from './CommentsComponents/Comments';
 export default function LeftSection({ currentVideo, currentVideoId, setVideoDetailsData}) {
     return (
         <div className='left-section'>
-            <Description currentVideo={currentVideo}/>
+            <Description setVideoDetailsData={setVideoDetailsData} currentVideo={currentVideo}/>
             <Comments setVideoDetailsData={setVideoDetailsData} currentVideoId={currentVideoId} commentsArray={currentVideo.comments}/>
         </div>
     )

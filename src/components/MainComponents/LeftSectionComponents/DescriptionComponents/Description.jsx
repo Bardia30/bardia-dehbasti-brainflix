@@ -6,11 +6,11 @@ import DescriptionTitle from './DescriptionTitle';
 // import videoDetailsData from '../../../../data/video-details.json';
 
 
-export default function Description ({ currentVideo }) {
+export default function Description ({ currentVideo, setVideoDetailsData }) {
     return (
         <section className='description'>
             <DescriptionTitle title={currentVideo.title}/>
-            <DescriptionLowerSection currentVideo={currentVideo}/>
+            <DescriptionLowerSection setVideoDetailsData={setVideoDetailsData} currentVideo={currentVideo}/>
             <DescriptionLongText description={currentVideo.description}/>
         </section>
     )

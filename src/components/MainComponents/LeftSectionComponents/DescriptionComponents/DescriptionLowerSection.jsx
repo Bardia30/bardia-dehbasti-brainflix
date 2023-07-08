@@ -5,12 +5,12 @@ import Statistics from './Statistics';
 
 
 
-export default function DescriptionLowerSection({ currentVideo }) {
+export default function DescriptionLowerSection({ currentVideo, setVideoDetailsData }) {
     
     return (
         <div className='description__lower-section'>
             <AuthorDate currentVideo={currentVideo}/>
-            <Statistics currentVideo={currentVideo}/>
+            <Statistics setVideoDetailsData={setVideoDetailsData} currentVideo={currentVideo}/>
         </div>
     )
 }

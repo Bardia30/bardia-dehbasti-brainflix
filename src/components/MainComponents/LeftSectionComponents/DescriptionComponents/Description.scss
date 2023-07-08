@@ -104,6 +104,7 @@
     &__stat-icon{
         width:1.625rem;
         margin-right:0.5rem;
+        cursor: pointer;
         @include tablet{
             width:auto;
         }
