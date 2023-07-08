@@ -9,8 +9,7 @@ function UploadForm() {
   const apiUrl = 'http://localhost:5050/videos';
 
   const navigate = useNavigate();
-
-
+  
   const [titleValue, setTitleValue] = useState('');
   const [descriptionValue, setDescriptionValue] = useState('');
   
@@ -31,22 +30,19 @@ function UploadForm() {
     setDescriptionValue('');
     setTitleValue('');
 
-    //TODO: Fix the object's keys 
+    
     const newObj = {
       videoTitle: userTitle,
       videoDescription: userDescription
     }
     
-    //TODO: write axios post request to the backend API
+    
     axios.post(apiUrl, newObj)
       .then(res => {
-        console.log(res.data)
+        alert(res.data);
+        navigate('/');  
       })
-      .catch(err => console.log(err.message));
-    
-    //TODO: uncomment this later
-    //alert(`Your Video titled "${userTitle}" has been uploaded!`); 
-    //navigate('/');   
+      .catch(err => alert(err.response.data));
   }
 
   const cancelClickHandler = (e) => {
