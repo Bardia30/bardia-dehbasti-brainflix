@@ -10,6 +10,8 @@ function UploadForm() {
 
   const navigate = useNavigate();
   
+
+  //managing form inputs with state, and changing state with user onChange
   const [titleValue, setTitleValue] = useState('');
   const [descriptionValue, setDescriptionValue] = useState('');
   
@@ -27,16 +29,17 @@ function UploadForm() {
 
     const userTitle = e.target.videoTitle.value;
     const userDescription = e.target.videoDescription.value;
+    //sets the form input values back to emtpty
     setDescriptionValue('');
     setTitleValue('');
 
-    
+    //new objectect created to send to the backend via a post request
     const newObj = {
       videoTitle: userTitle,
       videoDescription: userDescription
     }
     
-    
+    //send a post request to the backend using axios, sending the newObj
     axios.post(apiUrl, newObj)
       .then(res => {
         alert(res.data);
@@ -45,6 +48,7 @@ function UploadForm() {
       .catch(err => alert(err.response.data));
   }
 
+  //click handler function for the cancel button
   const cancelClickHandler = (e) => {
     e.preventDefault();
     alert("Your video upload process has been cancelled")
