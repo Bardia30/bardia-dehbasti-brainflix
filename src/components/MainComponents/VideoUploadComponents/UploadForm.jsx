@@ -33,7 +33,7 @@ function UploadForm() {
     setDescriptionValue('');
     setTitleValue('');
 
-    //new objectect created to send to the backend via a post request
+    //new object created to send to the backend via a post request
     const newObj = {
       videoTitle: userTitle,
       videoDescription: userDescription
